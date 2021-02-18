@@ -1,0 +1,76 @@
+<div class="flex space-x-6 my-20">
+  <div class="w-1/5 flex flex-col border-2 border-gray-200 py-5">
+    <h1 class="bg-blue-900 w-1/2 text-white font-bold px-2 text-lg">
+      <em>{{ headerOne | uppercase }}</em>
+    </h1>
+    <div class="flex flex-col p-3 space-y-3">
+      <div
+        class="flex space-x-2 items-center"
+        *ngFor="let item of dataOne; trackBy: trackByFn"
+      >
+        <img
+          src="{{ item.imageURL }}"
+          alt="path1"
+          class="overflow-hidden w-48 object-cover"
+        />
+        <div class="my-3">
+          <p class="text-xs font-bold">
+            {{ item.title }}
+          </p>
+          <p class="text-gray-600 text-xs">{{ item.date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-3/5">
+    <div class="relative">
+      <h1 class="text-gray-300 text-5xl font-black">LATEST</h1>
+      <h1 class="text-xl text-green-700 font-bold absolute bottom-2 left-2">
+        {{ headerTwo | uppercase }}
+      </h1>
+    </div>
+
+    <div class="flex flex-col space-y-4">
+      <div
+        class="flex space-x-3 h-32"
+        *ngFor="let item of dataTwo; trackBy: trackByFn"
+      >
+        <img
+          src="{{ item.imageURL }}"
+          alt="gyamfi"
+          class="object-cover overflow-hidden"
+        />
+        <div>
+          <h1>
+            {{ item.title }}
+          </h1>
+          <em class="my-2 text-xs text-gray-800">
+            {{ item.author }} - {{ item.date }}
+          </em>
+          <p class="my-2 text-sm text-gray-800">
+            {{ item.body }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-1/5 flex flex-col border-2 border-gray-200 py-5 flex-none h-96">
+    <h1 class="bg-red-700 w-1/2 text-white font-bold px-2 text-lg">
+      <em> {{ headerThree | uppercase }}</em>
+    </h1>
+    <div class="flex flex-col p-3 space-y-3">
+      <div
+        class="flex space-x-2 items-center"
+        *ngFor="let item of dataThree; trackBy: trackByFn"
+      >
+        <img src="{{ item.imageURL }}" alt="path1" class="h-14" />
+        <div class="">
+          <p class="text-xs font-bold">
+            {{ item.title }}
+          </p>
+          <p class="text-gray-600 text-xs my-2">{{ item.date }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

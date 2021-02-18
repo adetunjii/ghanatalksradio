@@ -1,0 +1,32 @@
+<div class="flex justify-between items-center bg-black text-white py-6 px-20">
+  <div>
+    <h1 class="font-black text-4xl">GTR</h1>
+  </div>
+  <div class="flex justify-between space-x-6">
+    <ul *ngFor="let link of links; trackBy: trackByFn">
+      <li
+        class="text-sm p-1 cursor-pointer"
+        routerLink="{{ link.path }}"
+        routerLinkActive="bg-green-600 text-black"
+      >
+        {{ link.name | uppercase }}
+      </li>
+    </ul>
+  </div>
+  <div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="#fff"
+      class="h-8 w-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+      />
+    </svg>
+  </div>
+</div>
