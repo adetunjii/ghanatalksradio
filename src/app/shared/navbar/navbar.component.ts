@@ -45,7 +45,16 @@ export class NavbarComponent implements OnInit {
     },
   ];
 
+  isMobileNav: boolean = false;
+  isHidden: boolean = false;
+
   constructor() {}
+
+  calcStyle() {
+    return {
+      hidden: this.isMobileNav,
+    };
+  }
 
   trackByFn(index: number, item: any) {
     return item.id;

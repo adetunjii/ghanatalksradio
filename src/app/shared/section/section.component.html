@@ -1,5 +1,5 @@
-<div class="flex space-x-6 my-20">
-  <div class="w-1/5 flex flex-col border-2 border-gray-200 py-5">
+<div class="md:flex flex-row md:space-x-6 my-20">
+  <div class="md:w-1/5 flex flex-col md:border-2 border-gray-200 md:py-5">
     <h1 class="bg-blue-900 w-1/2 text-white font-bold px-2 text-lg">
       <em>{{ headerOne | uppercase }}</em>
     </h1>
@@ -11,7 +11,7 @@
         <img
           src="{{ item.imageURL }}"
           alt="path1"
-          class="overflow-hidden w-48 object-cover"
+          class="overflow-hidden w-32 md:w-48 object-cover"
         />
         <div class="my-3">
           <p class="text-xs font-bold">
@@ -22,15 +22,15 @@
       </div>
     </div>
   </div>
-  <div class="w-3/5">
+  <div class="md:w-3/5 my-12 md:my-0">
     <div class="relative">
-      <h1 class="text-gray-300 text-5xl font-black">LATEST</h1>
+      <h1 class="text-gray-300 text-5xl font-black my-3">LATEST</h1>
       <h1 class="text-xl text-green-700 font-bold absolute bottom-2 left-2">
         {{ headerTwo | uppercase }}
       </h1>
     </div>
 
-    <div class="flex flex-col space-y-4">
+    <div class="flex flex-col space-y-10">
       <div
         class="flex space-x-3 h-32"
         *ngFor="let item of dataTwo; trackBy: trackByFn"
@@ -38,7 +38,7 @@
         <img
           src="{{ item.imageURL }}"
           alt="gyamfi"
-          class="object-cover overflow-hidden"
+          class="h-36 object-cover overflow-hidden"
         />
         <div>
           <h1>
@@ -47,14 +47,16 @@
           <em class="my-2 text-xs text-gray-800">
             {{ item.author }} - {{ item.date }}
           </em>
-          <p class="my-2 text-sm text-gray-800">
+          <p class="my-2 text-sm text-gray-800 hidden md:block">
             {{ item.body }}
           </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-1/5 flex flex-col border-2 border-gray-200 py-5 flex-none h-96">
+  <div
+    class="md:w-1/5 flex flex-col md:border-2 border-gray-200 py-5 flex-none md:h-96 my-12"
+  >
     <h1 class="bg-red-700 w-1/2 text-white font-bold px-2 text-lg">
       <em> {{ headerThree | uppercase }}</em>
     </h1>
@@ -63,9 +65,9 @@
         class="flex space-x-2 items-center"
         *ngFor="let item of dataThree; trackBy: trackByFn"
       >
-        <img src="{{ item.imageURL }}" alt="path1" class="h-14" />
+        <img src="{{ item.imageURL }}" alt="path1" class="h-20 md:h-14" />
         <div class="">
-          <p class="text-xs font-bold">
+          <p class="text-sm md:text-xs font-bold">
             {{ item.title }}
           </p>
           <p class="text-gray-600 text-xs my-2">{{ item.date }}</p>

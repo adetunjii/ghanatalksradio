@@ -1,50 +1,54 @@
 <div>
-  <div class="flex justify-between p-10">
+  <div class="flex justify-between p-4 md:p-10">
     <p>
       <span class="bg-red-500 px-3 py-1 mr-2 text-white">TRENDING NEWS</span>
       U.S. Treasury says more time needed to decide on Trump's tax returns -
       BloomBerg
     </p>
   </div>
-  <div class="flex justify-between">
-    <div class="bg-black text-white w-4/5 h-96 p-5 relative z-0">
+  <div class="md:flex justify-between">
+    <div class="bg-black text-white md:w-4/5 h-72 md:h-96 p-5 relative z-0">
       <h1 class="text-3xl font-bold">LATEST NEWS</h1>
-      <div class="flex p-16">
+      <div class="flex p-1 md:p-16">
         <div class="absolute z-10">
           <div class="flex h-auto">
             <div>
-              <img src="../../../assets/NoPath.png" alt="strike" class="h-72" />
+              <img
+                src="../../../assets/NoPath.png"
+                alt="strike"
+                class="mt-8 h-52 md:h-72 overflow-hidden object-cover"
+              />
             </div>
-            <div>
-              <p class="p-2 text-sm">EDUCATION</p>
+            <div class="flex-auto pt-6">
+              <p class="p-1 md:p-2 text-sm">EDUCATION</p>
               <p
-                class="bg-green-300 text-black my-2 text-2xl font-bold p-2 -ml-3 w-72"
+                class="bg-green-300 text-black my-1 text-sm md:text-2xl font-bold p-1 -ml-8 w-52 md:w-96"
               >
                 Court orders Senior Staff
               </p>
               <p
-                class="bg-green-300 text-black my-2 text-2xl font-bold p-2 px-4 -ml-3"
+                class="bg-green-300 text-black my-1 text-sm md:text-2xl font-bold p-2 px-4 -ml-8 w-56 md:w-96"
               >
                 Association of Universities to
               </p>
               <p
-                class="bg-green-300 text-black my-2 text-2xl font-bold p-2 px-4 -ml-3 w-72"
+                class="bg-green-300 text-black my-1 text-sm md:text-2xl font-bold p-2 px-4 -ml-8 md:w-96"
               >
                 Terminate Strike Action
               </p>
-              <p class="p-2 text-sm tracking-wider">4th February 2021</p>
+              <p class="p-1 md:p-2 text-sm tracking-wider">4th February 2021</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="flex flex-col space-y-6">
+    <div class="hidden md:flex flex-col space-y-6">
       <app-radio></app-radio>
     </div>
   </div>
 
-  <div class="flex justify-between my-20">
-    <div class="flex space-x-3">
+  <div class="flex justify-between overflow-hidden my-20 space-x-8">
+    <div class="flex flex-none space-x-3">
       <div class="border-r-2 border-gray-400 text-4xl text-gray-300 pr-1 h-12">
         1
       </div>
@@ -92,7 +96,7 @@
         </div>
       </div>
     </div>
-    <div class="flex space-x-3">
+    <div class="flex flex-none space-x-3">
       <div class="border-r-2 border-gray-400 text-4xl text-gray-300 pr-1 h-12">
         2
       </div>
@@ -140,7 +144,7 @@
         </div>
       </div>
     </div>
-    <div class="flex space-x-3">
+    <div class="flex flex-none space-x-3">
       <div class="border-r-2 border-gray-400 text-4xl text-gray-300 pr-1 h-12">
         3
       </div>
@@ -188,7 +192,7 @@
         </div>
       </div>
     </div>
-    <div class="flex space-x-3">
+    <div class="flex flex-none space-x-3">
       <div class="border-r-2 border-gray-400 text-4xl text-gray-300 pr-1 h-12">
         4
       </div>
@@ -238,7 +242,7 @@
     </div>
   </div>
 
-  <div class="flex justify-between space-x-8">
+  <div class="hidden md:flex justify-between space-x-8">
     <div class="bg-gray-200 p-5 text-center w-1/3">
       <h1 class="text-xl font-bold text-green-600">
         Subscribe to our newsletter
@@ -289,20 +293,26 @@
     [dataThree]="dataThree"
   ></app-section>
 
-  <div class="relative">
+  <div class="relative hidden md:block">
     <div class="bg-green-600 p-4 h-56 z-0">
       <h1 class="text-white text-2xl font-black">MOST POPULAR</h1>
     </div>
 
-    <div class="p-10 flex space-x-6 -mt-48 z-50 top-0">
-      <div class="flex-none w-2/4">
-        <img src="../../../assets/refinery.png" alt="refinery" />
-        <h1 class="font-black text-3xl">
-          ISRAEL: Haifa oil refinery tower collapses
-        </h1>
+    <div class="p-10 flex flex-col md:flex-row space-x-6 -mt-48 z-50 top-0">
+      <div class="flex flex-row md:flex-col flex-none w-3/4 md:w-2/4">
+        <img
+          src="../../../assets/refinery.png"
+          alt="refinery"
+          class="h-40 md:h-auto"
+        />
+        <div class="flex-none">
+          <h1 class="font-black text-3xl flex-none text-white md:text-black">
+            ISRAEL: Haifa oil refinery tower collapses
+          </h1>
+        </div>
       </div>
       <div>
-        <div class="flex justify-evenly w-full flex-wrap pt-6 space-x-10">
+        <div class="flex justify-between w-full pt-6 space-x-10">
           <div>
             <img src="../../../assets/joeboy.png" alt="joeboy" class="h-32" />
             <h1 class="font-bold text-lg">
@@ -318,7 +328,7 @@
             <em class="text-xs">John Emerald - February 04 2021</em>
           </div>
         </div>
-        <div class="flex justify-evenly w-full flex-wrap pt-2 space-x-10">
+        <div class="flex justify-between w-full pt-2 space-x-10">
           <div>
             <img src="../../../assets/joeboy.png" alt="joeboy" class="h-32" />
             <h1 class="font-bold text-lg">
@@ -338,30 +348,71 @@
     </div>
   </div>
 
+  <div class="md:hidden">
+    <div class="bg-green-600 h-32 p-2">
+      <h1 class="font-bold text-sm text-white">MOST POPULAR</h1>
+      <div class="flex space-x-2">
+        <div class="flex-none">
+          <img src="../../../assets/refinery.png" alt="refinery" class="h-32" />
+        </div>
+        <div class="text-white">
+          <h1 class="text-sm font-bold">
+            Israel: Haifa oil refinery tower collapses
+          </h1>
+          <em>John Emerald - February 04 2021</em>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-between space-x-3 my-12">
+      <div>
+        <img src="../../../assets/joeboy.png" alt="joeboy" class="h-28" />
+        <h1 class="font-bold text-lg">Dj Spinall feat. Fireboy DML - Sere</h1>
+        <em class="text-xs">John Emerald - February 04 2021</em>
+      </div>
+      <div>
+        <img src="../../../assets/joeboy.png" alt="joeboy" class="h-28" />
+        <h1 class="font-bold text-lg">Dj Spinall feat. Fireboy DML - Sere</h1>
+        <em class="text-xs">John Emerald - February 04 2021</em>
+      </div>
+    </div>
+    <div class="flex justify-between space-x-3 my-12">
+      <div>
+        <img src="../../../assets/joeboy.png" alt="joeboy" class="h-28" />
+        <h1 class="font-bold text-lg">Dj Spinall feat. Fireboy DML - Sere</h1>
+        <em class="text-xs">John Emerald - February 04 2021</em>
+      </div>
+      <div>
+        <img src="../../../assets/joeboy.png" alt="joeboy" class="h-28" />
+        <h1 class="font-bold text-lg">Dj Spinall feat. Fireboy DML - Sere</h1>
+        <em class="text-xs">John Emerald - February 04 2021</em>
+      </div>
+    </div>
+  </div>
+
   <app-world-section></app-world-section>
 
   <div>
     <div class="p-2 border-b-2 border-gray-200 my-4">
       <h1 class="font-bold text-2xl">LATEST ARTICLES</h1>
     </div>
-    <div class="flex justify-between space-x-8 border-b-2 py-5">
+    <div class="md:flex justify-between space-x-8 border-b-2 py-5">
       <div class="relative">
         <img src="../../../assets/scarcity.png" alt="water scarcity" />
-        <div class="absolute top-52 left-32">
+        <div class="absolute top-5 left-5 md:top-52 md:left-32">
           <h1 class="text-sm bg-red-600 text-white w-16 px-3">NEWS</h1>
-          <h1 class="bg-green-300 font-black text-3xl p-2 my-3">
+          <h1 class="bg-green-300 font-black text-md md:text-3xl p-2 my-3">
             Water scarcity hits domongo
           </h1>
-          <h1 class="bg-green-300 font-black text-3xl p-2">
+          <h1 class="bg-green-300 font-black text-md md:text-3xl p-2">
             as price of drums skyrocket
           </h1>
 
-          <em class="text-white flex items-end"
+          <em class="text-white flex items-end text-sm"
             >John Emerald - February 04 2021</em
           >
         </div>
       </div>
-      <div class="w-1/4 flex-none">
+      <div class="w-1/4 flex-none hidden md:block">
         <img src="../../../assets/okada.png" alt="okada" class="flex-none" />
         <h1 class="font-bold text-xl my-4">
           Police clamps down on 'okada' as officials impound 59 motorcycles in
@@ -374,8 +425,20 @@
     </div>
   </div>
 
-  <div class="flex flex-row space-x-4 my-10">
-    <div class="flex flex-none space-x-2 w-1/3">
+  <!-- <div
+    class="flex flex-row flex-wrap md:flex-nowrap space-y-2 md:space-x-4 my-10"
+  >
+    <div class="flex flex-none space-x-2 md:w-1/3">
+      <img src="../../../assets/power.png" alt="power" class="h-24" />
+      <div class="flex flex-col space-y-3 p-2">
+        <p class="text-sm font-bold whitespace-normal">
+          EU disburses £9.7m to Ghana towards boosting power supply in
+          Sub-region
+        </p>
+        <em class="text-xs">John Emerald - February 04 2021</em>
+      </div>
+    </div>
+    <div class="flex flex-none space-x-2 md:w-1/3">
       <img src="../../../assets/power.png" alt="power" class="h-24" />
       <div class="flex flex-col space-y-3 p-2">
         <p class="text-sm font-bold">
@@ -385,7 +448,7 @@
         <em class="text-xs">John Emerald - February 04 2021</em>
       </div>
     </div>
-    <div class="flex flex-none space-x-2 w-1/3">
+    <div class="flex flex-none space-x-2 md:w-1/3">
       <img src="../../../assets/power.png" alt="power" class="h-24" />
       <div class="flex flex-col space-y-3 p-2">
         <p class="text-sm font-bold">
@@ -395,20 +458,22 @@
         <em class="text-xs">John Emerald - February 04 2021</em>
       </div>
     </div>
-    <div class="flex flex-none space-x-2 w-1/3">
-      <img src="../../../assets/power.png" alt="power" class="h-24" />
-      <div class="flex flex-col space-y-3 p-2">
-        <p class="text-sm font-bold">
-          EU disburses £9.7m to Ghana towards boosting power supply in
-          Sub-region
-        </p>
-        <em class="text-xs">John Emerald - February 04 2021</em>
-      </div>
-    </div>
-  </div>
+  </div> -->
 
-  <div class="flex flex-row space-x-4">
-    <div class="flex flex-none space-x-2 w-1/3">
+  <!-- <div
+    class="flex flex-row flex-wrap md:flex-nowrap space-y-2 md:space-x-4 my-10"
+  >
+    <div class="flex flex-none space-x-2 md:w-1/3">
+      <img src="../../../assets/power.png" alt="power" class="h-24" />
+      <div class="flex flex-col space-y-3 p-2">
+        <p class="text-sm font-bold whitespace-normal">
+          EU disburses £9.7m to Ghana towards boosting power supply in
+          Sub-region
+        </p>
+        <em class="text-xs">John Emerald - February 04 2021</em>
+      </div>
+    </div>
+    <div class="flex flex-none space-x-2 md:w-1/3">
       <img src="../../../assets/power.png" alt="power" class="h-24" />
       <div class="flex flex-col space-y-3 p-2">
         <p class="text-sm font-bold">
@@ -418,7 +483,7 @@
         <em class="text-xs">John Emerald - February 04 2021</em>
       </div>
     </div>
-    <div class="flex flex-none space-x-2 w-1/3">
+    <div class="flex flex-none space-x-2 md:w-1/3">
       <img src="../../../assets/power.png" alt="power" class="h-24" />
       <div class="flex flex-col space-y-3 p-2">
         <p class="text-sm font-bold">
@@ -428,17 +493,7 @@
         <em class="text-xs">John Emerald - February 04 2021</em>
       </div>
     </div>
-    <div class="flex flex-none space-x-2 w-1/3">
-      <img src="../../../assets/power.png" alt="power" class="h-24" />
-      <div class="flex flex-col space-y-3 p-2">
-        <p class="text-sm font-bold">
-          EU disburses £9.7m to Ghana towards boosting power supply in
-          Sub-region
-        </p>
-        <em class="text-xs">John Emerald - February 04 2021</em>
-      </div>
-    </div>
-  </div>
+  </div> -->
 
   <app-entertainment-section></app-entertainment-section>
 </div>
