@@ -14,10 +14,10 @@
           class="overflow-hidden w-32 md:w-48 object-cover"
         />
         <div class="my-3">
-          <p class="text-xs font-bold">
+          <p class="text-xxs font-bold">
             {{ item.title }}
           </p>
-          <p class="text-gray-600 text-xs">{{ item.date }}</p>
+          <p class="text-gray-600 text-xxs">{{ item.date }}</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
           <h1>
             {{ item.title }}
           </h1>
-          <em class="my-2 text-xs text-gray-800">
+          <em class="my-2 text-xxs text-gray-800">
             {{ item.author }} - {{ item.date }}
           </em>
           <p class="my-2 text-sm text-gray-800 hidden md:block">
@@ -55,7 +55,7 @@
     </div>
   </div>
   <div
-    class="md:w-1/5 flex flex-col md:border-2 border-gray-200 py-5 flex-none md:h-96 my-12"
+    class="md:w-1/5 flex flex-col md:border-2 border-gray-200 py-5 flex-none h-75 my-12"
   >
     <h1 class="bg-red-700 w-1/2 text-white font-bold px-2 text-lg">
       <em> {{ headerThree | uppercase }}</em>
@@ -67,10 +67,10 @@
       >
         <img src="{{ item.imageURL }}" alt="path1" class="h-20 md:h-14" />
         <div class="">
-          <p class="text-sm md:text-xs font-bold">
+          <p class="text-sm md:text-xxs font-bold">
             {{ item.title }}
           </p>
-          <p class="text-gray-600 text-xs my-2">{{ item.date }}</p>
+          <p class="text-gray-600 text-xxs my-2">{{ item.date }}</p>
         </div>
       </div>
     </div>

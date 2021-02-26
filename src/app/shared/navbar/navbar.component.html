@@ -1,5 +1,5 @@
 <div
-  class="hidden md:flex justify-between items-center bg-black text-white py-6 px-20"
+  class="hidden xl:flex justify-between items-center bg-black text-white py-6 px-20"
 >
   <div>
     <h1 class="font-black text-4xl">GTR</h1>
@@ -35,8 +35,8 @@
 
 <!-- Mobile view nav -->
 <div>
-  <div class="py-3 md:hidden relative z-20">
-    <div class="flex justify-between items-center">
+  <div class="p-3 xl:hidden relative z-20">
+    <div class="flex justify-between items-center px-3">
       <h1 class="text-4xl font-bold">GTR</h1>
       <div
         class="flex space-x-3 items-center"
@@ -77,30 +77,47 @@
       </div>
     </div>
   </div>
-  <div
-    class="fixed z-50 w-11/12 top-0 transtition ease-in duration-1000"
-    *ngIf="isMobileNav"
-  >
+  <div class="fixed z-50 w-11/12 top-0" *ngIf="isMobileNav">
     <div
-      class="bg-green-900 opacity-100 text-white text-lg font-bold w-11/12 md:hidden h-screen absolute top-0 z-50 p-5 flex flex-col space-y-3"
+      class="bg-green opacity-100 text-white text-lg font-bold w-11/12 xl:hidden h-screen absolute top-0 z-50 p-5 flex flex-col space-y-3 transition ease-in-out duration-500"
     >
-      <div class="flex justify-between">
+      <div class="flex justify-between relative">
         <input
           type="text"
           placeholder="search"
-          class="p-2 bg-gray-50 w-1/2 rounded-md"
+          class="bg-gray-50 text-gray-700 w-3/4 rounded-md px-2"
         />
-        <h1
-          class="text-3xl font-semibold text-white -mr-3"
-          (click)="isMobileNav = false; isHidden = false"
-        >
-          X
-        </h1>
+        <div class="bg-green-lighten text-center -mr-10 px-5 rounded-lg">
+          <h1
+            class="text-3xl font-semibold text-white"
+            (click)="isMobileNav = false; isHidden = false"
+          >
+            X
+          </h1>
+        </div>
       </div>
-      <div>Home</div>
+      <div routerLink="" (click)="isMobileNav = false; isHidden = false">
+        Home
+      </div>
       <div>
-        News
-        <div class="my-1">
+        <div class="flex space-x-4" (click)="isNewsHidden = !isNewsHidden">
+          <div>News</div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-chevron-down text-white h-8 w-8"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </div>
+
+        <div class="my-1 font-normal" *ngIf="!isNewsHidden">
           <li
             class="list-none bg-gray-100 opacity-100 w-40 p-1 rounded-t-md text-gray-500 mb-1"
           >
@@ -117,10 +134,52 @@
       <div>Business</div>
       <div>Culture</div>
       <div>Music</div>
-      <div routerLink="/politics">Politics</div>
+      <div
+        routerLink="/politics"
+        (click)="isMobileNav = false; isHidden = false"
+      >
+        Politics
+      </div>
       <div>Sport</div>
-      <div routerLink="/tech">Tech</div>
+      <div routerLink="/tech" (click)="isMobileNav = false; isHidden = false">
+        Tech
+      </div>
       <div>Travel</div>
+      <div class="flexf flex-col justify-center">
+        <div class="text-center text-sm font-normal py-5">
+          <p>Download our mobile app on the various app stores</p>
+        </div>
+        <div class="flex justify-center space-x-3">
+          <div class="flex flex-col space-y-2 justify-center">
+            <div class="flex justify-center">
+              <img
+                src="../../../assets/qrcode.png"
+                alt="qrcode"
+                class="h-10 w-10"
+              />
+            </div>
+            <img
+              src="../../../assets/googleplay.png"
+              alt="google play"
+              class="h-6 w-16"
+            />
+          </div>
+          <div class="flex flex-col space-y-2 justify-center">
+            <div class="flex justify-center">
+              <img
+                src="../../../assets/qrcode2.png"
+                alt="qrcode"
+                class="h-10 w-10"
+              />
+            </div>
+            <img
+              src="../../../assets/appstore.png"
+              alt="appstore"
+              class="h-6 w-16"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

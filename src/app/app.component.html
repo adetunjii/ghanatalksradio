@@ -1,14 +1,16 @@
-<div class="p-2 md:p-10 relative text-xs md:text-sm">
+<div class="relative text-xs md:text-sm">
   <app-navbar></app-navbar>
-  <router-outlet></router-outlet>
+  <div class="p-2 md:p-10">
+    <router-outlet></router-outlet>
+  </div>
   <app-footer></app-footer>
   <div
-    class="md:hidden fixed z-50 w-full bottom-0 left-0 flex flex-row text-xs rounded-t-full bg-green-600 overflow-hidden"
+    class="md:hidden fixed z-50 w-full bottom-0 left-0 flex flex-row text-xs rounded-t-3xl bg-green-600 overflow-hidden"
   >
-    <div class="bg-red-500 text-white px-2 flex items-center">
+    <div class="bg-red-500 text-white p-2 flex items-center">
       <p>Listen Now</p>
     </div>
-    <div class="px-1 flex flex-row items-center text-xs space-x-3">
+    <div class="p-2 flex flex-row items-center text-xs space-x-3">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +32,7 @@
     </div>
     <div class="flex items-center space-x-3">
       <p class="text-xs text-white">{{ date | date: "mediumDate" }}</p>
-      <div class="flex justify-end items-end">
+      <div class="px-1">
         <img
           src="../../../assets/radio-waves.svg"
           alt="radio waves"

@@ -47,6 +47,7 @@ export class NavbarComponent implements OnInit {
 
   isMobileNav: boolean = false;
   isHidden: boolean = false;
+  isNewsHidden: boolean = true;
 
   constructor() {}
 
