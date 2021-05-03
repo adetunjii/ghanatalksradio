@@ -12,9 +12,11 @@ import { EntertainmentSectionComponent } from './shared/section/entertainment-se
 import { RadioComponent } from './shared/radio/radio.component';
 import { PoliticsComponent } from './views/politics/politics.component';
 import { TechComponent } from './views/tech/tech.component';
+import { NewsViewComponent } from './shared/news-view/news-view.component';
+import { NewsHeaderComponent } from './shared/news-header/news-header.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, SectionComponent, WorldSectionComponent, EntertainmentSectionComponent, RadioComponent, PoliticsComponent, TechComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, SectionComponent, WorldSectionComponent, EntertainmentSectionComponent, RadioComponent, PoliticsComponent, TechComponent, NewsViewComponent, NewsHeaderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

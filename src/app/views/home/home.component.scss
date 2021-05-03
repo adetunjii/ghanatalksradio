@@ -1,0 +1,13 @@
+.bg-red {
+  background: #ff0000;
+}
+
+.text-mid {
+  font-size: 35px;
+}
+
+@media (max-width: 768px) {
+  .text-mid {
+    @apply text-xl;
+  }
+}

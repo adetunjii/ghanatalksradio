@@ -1,5 +1,5 @@
 <div
-  class="hidden xl:flex justify-between items-center bg-black text-white py-6 px-20"
+  class="hidden xl:flex justify-between items-center bg-black text-white py-6 px-20 xl:shadow"
 >
   <div>
     <h1 class="font-black text-4xl">GTR</h1>
@@ -7,7 +7,7 @@
   <div class="flex justify-between space-x-6">
     <ul *ngFor="let link of links; trackBy: trackByFn">
       <li
-        class="text-sm p-1 cursor-pointer"
+        class="text-xs font-semibold p-1 cursor-pointer"
         routerLink="{{ link.path }}"
         routerLinkActive="bg-green-600 text-black"
       >
@@ -34,8 +34,11 @@
 </div>
 
 <!-- Mobile view nav -->
-<div>
-  <div class="p-3 xl:hidden relative z-20">
+<div class="relative">
+  <div
+    class="p-3 xl:hidden bg-white z-20 fixed top-0 left-0 w-full shadow-md"
+    *ngIf="!isMobileNav"
+  >
     <div class="flex justify-between items-center px-3">
       <h1 class="text-4xl font-bold">GTR</h1>
       <div
@@ -79,32 +82,41 @@
   </div>
   <div class="fixed z-50 w-11/12 top-0" *ngIf="isMobileNav">
     <div
-      class="bg-green opacity-100 text-white text-lg font-bold w-11/12 xl:hidden h-screen absolute top-0 z-50 p-5 flex flex-col space-y-3 transition ease-in-out duration-500"
+      class="bg-green opacity-100 text-white text-lg font-bold w-11/12 xl:hidden h-screen absolute top-0 z-20 p-5 flex flex-col space-y-3 transition ease-in-out duration-500 overflow-y-scroll overflow-x-hidden relative"
     >
-      <div class="flex justify-between relative">
+      <div class="flex justify-between">
         <input
           type="text"
           placeholder="search"
-          class="bg-gray-50 text-gray-700 w-3/4 rounded-md px-2"
+          class="bg-gray-50 text-gray-700 w-3/4 rounded-md p-1"
         />
-        <div class="bg-green-lighten text-center -mr-10 px-5 rounded-lg">
+        <div
+          class="bg-green-lighten text-center absolute z-50 right-0 px-5 rounded-lg cursor-pointer z-50"
+        >
           <h1
-            class="text-3xl font-semibold text-white"
+            class="text-3xl font-semibold text-white opacity-100"
             (click)="isMobileNav = false; isHidden = false"
           >
             X
           </h1>
         </div>
       </div>
-      <div routerLink="" (click)="isMobileNav = false; isHidden = false">
+      <div
+        class="text-sm font-semibold"
+        routerLink=""
+        (click)="isMobileNav = false; isHidden = false"
+      >
         Home
       </div>
-      <div>
-        <div class="flex space-x-4" (click)="isNewsHidden = !isNewsHidden">
+      <div class="text-sm font-semibold">
+        <div
+          class="flex items-center space-x-1"
+          (click)="isNewsHidden = !isNewsHidden"
+        >
           <div>News</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-chevron-down text-white h-8 w-8"
+            class="icon icon-tabler icon-tabler-chevron-down text-white h-6 w-6"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
@@ -130,26 +142,27 @@
           </li>
         </div>
       </div>
-      <div>Art</div>
-      <div>Business</div>
-      <div>Culture</div>
-      <div>Music</div>
+      <div class="text-sm font-semibold">Art</div>
+      <div class="text-sm font-semibold">Business</div>
+      <div class="text-sm font-semibold">Culture</div>
+      <div class="text-sm font-semibold">Music</div>
       <div
         routerLink="/politics"
         (click)="isMobileNav = false; isHidden = false"
+        class="text-sm font-semibold"
       >
         Politics
       </div>
-      <div>Sport</div>
+      <div class="text-sm font-semibold">Sport</div>
       <div routerLink="/tech" (click)="isMobileNav = false; isHidden = false">
         Tech
       </div>
-      <div>Travel</div>
-      <div class="flexf flex-col justify-center">
+      <div class="text-sm font-semibold">Travel</div>
+      <div class="flex flex-col justify-center">
         <div class="text-center text-sm font-normal py-5">
           <p>Download our mobile app on the various app stores</p>
         </div>
-        <div class="flex justify-center space-x-3">
+        <div class="flex justify-center space-x-3 mb-12">
           <div class="flex flex-col space-y-2 justify-center">
             <div class="flex justify-center">
               <img
